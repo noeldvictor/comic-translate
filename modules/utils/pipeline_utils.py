@@ -9,6 +9,7 @@ from ..detection.utils.general import does_rectangle_fit, is_mostly_contained, \
 from ..inpainting.lama import LaMa
 from ..inpainting.mi_gan import MIGAN
 from ..inpainting.aot import AOT
+from ..inpainting.flux import Flux
 from ..inpainting.schema import Config
 from app.ui.messages import Messages
 from PySide6.QtCore import Qt
@@ -47,6 +48,7 @@ inpaint_map = {
     "LaMa": LaMa,
     "MI-GAN": MIGAN,
     "AOT": AOT,
+    "Flux": Flux,
 }
 
 def get_config(settings_page):
