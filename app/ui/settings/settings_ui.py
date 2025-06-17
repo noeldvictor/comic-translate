@@ -30,7 +30,7 @@ class SettingsPageUI(QtWidgets.QWidget):
         self.credential_widgets = {}
         self.export_widgets = {}
 
-        self.inpainters = ['LaMa', 'AOT', 'MI-GAN']
+        self.inpainters = ['LaMa', 'AOT', 'MI-GAN', 'Flux']
         self.detectors = ['RT-DETR-v2']
         self.ocr_engines = [self.tr("Default"), self.tr('Microsoft OCR'), self.tr('Google Cloud Vision'), self.tr('Gemini-2.0-Flash'), self.tr('GPT-4.1-mini')]
         self.inpaint_strategy = [self.tr('Resize'), self.tr('Original'), self.tr('Crop')]
@@ -94,6 +94,7 @@ class SettingsPageUI(QtWidgets.QWidget):
             "LaMa": "LaMa",
             "MI-GAN": "MI-GAN",
             "AOT": "AOT",
+            "Flux": "Flux",
 
             # Detector mappings
             "RT-DETR-v2": "RT-DETR-v2",
