@@ -19,7 +19,9 @@ class Flux(InpaintModel):
     pad_mod = 32
 
     def init_model(self, device, **kwargs):
-        model_name = os.environ.get("FLUX_MODEL", "black-forest-labs/FLUX.1-schnell")
+        model_name = os.environ.get(
+            "FLUX_MODEL", "alimama-creative/FLUX.1-dev-Controlnet-Inpainting-Beta"
+        )
         dtype = torch.float16 if str(device).startswith("cuda") else torch.float32
         self.pipe = FluxInpaintPipeline.from_pretrained(model_name, torch_dtype=dtype)
         self.pipe = self.pipe.to(device)
