@@ -76,7 +76,7 @@ def does_rectangle_fit(bigger_rect, smaller_rect) -> bool:
     return fits_horizontally and fits_vertically
 
 
-def filter_and_fix_bboxes(bboxes, image_shape=None, width_tolerance=5, height_tolerance=5):
+def filter_and_fix_bboxes(bboxes, image_shape=None, width_tolerance=2, height_tolerance=2):
     """
     Filter out or fix bounding boxes that don't make sense.
     
