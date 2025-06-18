@@ -113,6 +113,12 @@ uv run comic.py
 ```
 This will launch the GUI
 
+To start a simple web server accessible on your local network, run:
+```bash
+uvicorn webapp.server:app --host 0.0.0.0 --port 8000
+```
+Then visit `http://localhost:8000` in your browser.
+
 ### Tips
 * If you have a CBR file, you'll need to install Winrar or 7-Zip then add the folder it's installed to (e.g "C:\Program Files\WinRAR" for Windows) to Path. If it's installed but not to Path, you may get the error, 
 ```bash
